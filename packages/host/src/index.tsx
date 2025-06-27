@@ -1,8 +1,7 @@
 import { createRoot } from "react-dom/client";
+import { Host } from "./Host";
 
-const Host = () => {
-  return <div>hey</div>
-}
+
 
 const c = document.querySelector("#root");
 createRoot(c).render(<Host />);
