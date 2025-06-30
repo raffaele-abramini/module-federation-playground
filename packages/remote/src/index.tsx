@@ -1,6 +1,5 @@
 import { createRoot } from "react-dom/client";
-import  Remote from "./Remote";
-
+import Remote from "./Remote";
 
 
 const c = document.querySelector("#root");

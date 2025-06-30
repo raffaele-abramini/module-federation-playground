@@ -1,9 +1,10 @@
-import * as React from "react";
+import { lazy } from "react";
 
-const RemoteComponent = React.lazy(() => import('remote/Remote'));
+const Remote = lazy(() => import( 'remote/Remote'))
 
 export const Host = () => {
-  return <div style={{background: "wheat", padding: "2em"}}>HOST app
-    <RemoteComponent />
+  return <div style={{ background: "wheat", padding: "2em" }}>HOST app
+    <hr/>
+    <Remote/>
   </div>
 }
