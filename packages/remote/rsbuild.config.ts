@@ -1,5 +1,5 @@
 import { defineConfig } from '@rsbuild/core';
-import { pluginModuleFederation } from '@module-federation/rsbuild-plugin';
+import { pluginModuleFederation } from "../../libs/rsbuild-plugin/src/cli";
 import { pluginReact } from "@rsbuild/plugin-react";
 
 export default defineConfig({

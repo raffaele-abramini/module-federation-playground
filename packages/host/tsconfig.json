@@ -3,7 +3,8 @@
     "baseUrl": ".",
     "jsx": "react-jsx",
     "paths": {
-      "remote/*": ["../remote/src/*"]
+      "remote/*": ["../remote/src/*"],
+      "rsbuild-plugin": ["../../libs/rsbuild-plugin/src/cli/index.ts"],
     },
   },
 }

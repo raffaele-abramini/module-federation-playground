@@ -2,5 +2,8 @@
   "compilerOptions": {
     "baseUrl": ".",
     "jsx": "react-jsx",
+    "paths": {
+      "~/rsbuild-plugin": ["../../libs/rsbuild-plugin/src/cli/index.ts"]
+    }
   },
 }

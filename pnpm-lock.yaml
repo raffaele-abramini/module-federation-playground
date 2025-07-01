@@ -6,6 +6,12 @@ settings:
 
 catalogs:
   default:
+    '@rsbuild/core':
+      specifier: ^1.4.2
+      version: 1.4.2
+    '@rsbuild/plugin-react':
+      specifier: ^1.3.2
+      version: 1.3.2
     '@types/react':
       specifier: ^19.1.8
       version: 19.1.8
@@ -26,6 +32,25 @@ importers:
 
   .: {}
 
+  libs/rsbuild-plugin:
+    dependencies:
+      '@module-federation/enhanced':
+        specifier: '*'
+        version: 0.15.0(@rspack/core@1.4.1(@swc/helpers@0.5.17))(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(typescript@5.8.3)(webpack@5.99.9)
+      '@module-federation/node':
+        specifier: '*'
+        version: 2.7.7(@rspack/core@1.4.1(@swc/helpers@0.5.17))(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(typescript@5.8.3)(webpack@5.99.9)
+      '@module-federation/sdk':
+        specifier: '*'
+        version: 0.15.0
+      fs-extra:
+        specifier: 11.3.0
+        version: 11.3.0
+    devDependencies:
+      '@rsbuild/core':
+        specifier: ^1.3.21
+        version: 1.4.2
+
   packages/host:
     dependencies:
       react:
@@ -35,14 +60,11 @@ importers:
         specifier: 'catalog:'
         version: 19.0.0(react@19.0.0)
     devDependencies:
-      '@module-federation/rsbuild-plugin':
-        specifier: ^0.15.0
-        version: 0.15.0(@rsbuild/core@1.4.2)(@rspack/core@1.4.1(@swc/helpers@0.5.17))(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(typescript@5.8.3)(webpack@5.99.9)
       '@rsbuild/core':
-        specifier: ^1.4.2
+        specifier: 'catalog:'
         version: 1.4.2
       '@rsbuild/plugin-react':
-        specifier: ^1.3.2
+        specifier: 'catalog:'
         version: 1.3.2(@rsbuild/core@1.4.2)
       '@types/react':
         specifier: 'catalog:'
@@ -63,14 +85,11 @@ importers:
         specifier: 'catalog:'
         version: 19.0.0(react@19.0.0)
     devDependencies:
-      '@module-federation/rsbuild-plugin':
-        specifier: ^0.15.0
-        version: 0.15.0(@rsbuild/core@1.4.2)(@rspack/core@1.4.1(@swc/helpers@0.5.17))(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(typescript@5.8.3)(webpack@5.99.9)
       '@rsbuild/core':
-        specifier: ^1.4.2
+        specifier: 'catalog:'
         version: 1.4.2
       '@rsbuild/plugin-react':
-        specifier: ^1.3.2
+        specifier: 'catalog:'
         version: 1.3.2(@rsbuild/core@1.4.2)
       '@types/react':
         specifier: 'catalog:'
@@ -312,15 +331,6 @@ packages:
       react:
         optional: true
       react-dom:
-        optional: true
-
-  '@module-federation/rsbuild-plugin@0.15.0':
-    resolution: {integrity: sha512-3F3R4+tN7AjT/4jN+N6jzSDU37DYPumnYBTioD1wLeook5QF1xVtPaTjTB0Jm6JSjnvkQ24K6YAT6tG9wXVvAg==}
-    engines: {node: '>=16.0.0'}
-    peerDependencies:
-      '@rsbuild/core': ^1.3.21
-    peerDependenciesMeta:
-      '@rsbuild/core':
         optional: true
 
   '@module-federation/rspack@0.15.0':
@@ -1489,27 +1499,6 @@ snapshots:
       - typescript
       - utf-8-validate
       - vue-tsc
-
-  '@module-federation/rsbuild-plugin@0.15.0(@rsbuild/core@1.4.2)(@rspack/core@1.4.1(@swc/helpers@0.5.17))(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(typescript@5.8.3)(webpack@5.99.9)':
-    dependencies:
-      '@module-federation/enhanced': 0.15.0(@rspack/core@1.4.1(@swc/helpers@0.5.17))(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(typescript@5.8.3)(webpack@5.99.9)
-      '@module-federation/node': 2.7.7(@rspack/core@1.4.1(@swc/helpers@0.5.17))(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(typescript@5.8.3)(webpack@5.99.9)
-      '@module-federation/sdk': 0.15.0
-      fs-extra: 11.3.0
-    optionalDependencies:
-      '@rsbuild/core': 1.4.2
-    transitivePeerDependencies:
-      - '@rspack/core'
-      - bufferutil
-      - debug
-      - next
-      - react
-      - react-dom
-      - supports-color
-      - typescript
-      - utf-8-validate
-      - vue-tsc
-      - webpack
 
   '@module-federation/rspack@0.15.0(@rspack/core@1.4.1(@swc/helpers@0.5.17))(typescript@5.8.3)':
     dependencies:
